@@ -21,7 +21,7 @@ In Portal Azure Portal, [create a Service Principal and assign it permissions](S
 **Key needs to be URL encoded**, such as `kY%2F0Ba48qUoC29ClLL%20JMt0NdHiDPmI2naS6cZfxxxx%3D`. Notepad++ plugin MIME Tools doesn't encode +, which perhaps is a bug. You may use https://meyerweb.com/eric/tools/dencoder/.
 
 ```Batchfile
-curl https://login.microsoftonline.com/<tenant-ID>/oauth2/token -H "Content-Type: application/x-www-form-urlencoded" --data "grant_type=client_credentials&client_id=<Client ID>&client_secret=<Client Secret>=https%3A%2F%2Fmanagement.core.windows.net%2F"
+curl https://login.microsoftonline.com/<tenant-ID>/oauth2/token -H "Content-Type: application/x-www-form-urlencoded" --data "grant_type=client_credentials&client_id=<Client ID>&client_secret=<Client Secret>&resource=https%3A%2F%2Fmanagement.core.windows.net%2F"
 ```
 
 To give it a prettier look (line break is added only for demonstration):
